@@ -19,7 +19,7 @@ jobs:
       - name: Display greeting output
         run: "Output: ${{ steps.greet.outputs.greeting }}" 
   compliment:
-  needs: greet
-  runs-on: ubuntu-latest
-  steps:
+    needs: greet
+    runs-on: ubuntu-latest
+    steps:
     - run: "The first job said: ${{ needs.greet.outputs.greeting }}" 
